@@ -92,16 +92,12 @@ class MissingImagesApp(QMainWindow):
         self.setWindowTitle('Check Missing Images')
         self.setGeometry(100, 100, 800, 600)
         
-        # Set window icon based on OS
-        script_dir = pathlib.Path(__file__).parent
-        if platform.system() == 'Windows':
-            icon_path = script_dir / 'cmi.ico'
-            if icon_path.exists():
-                self.setWindowIcon(QIcon(str(icon_path)))
-        elif platform.system() == 'Linux':
-            icon_path = script_dir / 'cmi.png'
-            if icon_path.exists():
-                self.setWindowIcon(QIcon(str(icon_path)))
+        if platform.system() == "Windows":
+            icon_path = "cmi.ico"
+        else:
+            icon_path = "cmi.png" if os.path.isfile("cmi.png") else ""
+        if icon_path:
+            self.setWindowIcon(QIcon(icon_path))
         
         # Central widget and layout
         central_widget = QWidget()
