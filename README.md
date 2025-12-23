@@ -1,10 +1,10 @@
 # Check Missing Images (cmi.py)
 
-A cross-platform PyQt5 desktop application for verifying missing images for ROM files. The tool compares the files in a ROMs folder against image files in another folder (including subfolders), optionally using a filename prefix, and generates a log of missing images.
+A cross-platform PyQt6 desktop application for verifying missing images for ROM files. The tool compares the files in a ROMs folder against image files in another folder (including subfolders), optionally using a filename prefix, and generates a log of missing images.
 
 ## Features
 
-- **Graphical User Interface:** Easy-to-use PyQt5 interface.
+- **Graphical User Interface:** Easy-to-use PyQt6 interface.
 - **ROM and Image Directory Selection:** Select folders for ROM files and their associated images.
 - **Prefix Support:** Specify an optional prefix for image filenames.
 - **Progress Bar:** Visual progress feedback during checking.
@@ -21,11 +21,11 @@ A cross-platform PyQt5 desktop application for verifying missing images for ROM 
 
 2. **Install dependencies:**
    - Python 3.7+
-   - PyQt5
+   - PyQt6
 
    Install with pip:
    ```bash
-   pip install PyQt5
+   pip install PyQt6
    ```
 
 ## Usage
@@ -59,8 +59,8 @@ python cmi.py
 
 ## Troubleshooting
 
-- **PyQt5 not installed?**  
-  Install with `pip install PyQt5`.
+- **PyQt6 not installed?**  
+  Install with `pip install PyQt6`.
 
 - **Permission errors or invalid paths?**  
   Ensure you have access to the selected folders and that they exist.
